@@ -197,3 +197,35 @@ Small changes that give big results:
 
 
 # Module II: API-First Mastery
+
+## Fetch & Async/Await Pattern
+
+### What is Fetch & Async/Await?
+
+Fetch: A JavaScript function to request data from a server (API).
+
+Async/Await: Syntax to handle asynchronous operations cleanly and readably.
+
+Helps React apps get data without blocking the UI.
+
+### Basic Fetch Example
+``` javascript
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+### Async/Await
+``` javascript
+async function fetchPosts() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+  }
+}
+fetchPosts();
+```
