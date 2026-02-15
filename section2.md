@@ -195,3 +195,5 @@ Small changes that give big results:
 - Lazy load content → improves performance  
 - Minify CSS/JS → smaller files
 
+
+# Module II: API-First Mastery
