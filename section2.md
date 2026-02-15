@@ -230,4 +230,44 @@ async function fetchPosts() {
 fetchPosts();
 ```
 
-## Dynamic List Renderingط
+## Dynamic List Rendering
+
+### Dynamic List Rendering? 
+Displaying data from array of objects or API to the UI.
+
+In React, we often use the `.map()` function to generate components.
+
+### Why It important?
+
+Avoids manual HTML coding for each item.
+
+Makes your UI scalable and maintainable.
+
+Works easly with API data or local JSON arrays.
+
+Essential for real-time dashboards and competitions.
+
+### Basic JSON Example
+``` json
+[
+  { "id": 1, "title": "Post 1", "author": "Alice" },
+  { "id": 2, "title": "Post 2", "author": "Bob" }
+]
+```
+Array of objects received from API or local file.
+
+### Rendering with .map()
+``` javascript
+function PostList({ posts }) {
+  return (
+    <div>
+      {posts.map(post => (
+        <div key={post.id} className="card">
+          <h2>{post.title}</h2>
+          <p>By {post.author}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+```
